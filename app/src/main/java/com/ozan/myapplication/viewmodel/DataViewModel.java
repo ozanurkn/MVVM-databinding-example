@@ -30,6 +30,7 @@ public class DataViewModel extends Observable {
     }
 
     public void changeDataSet() {
+        tdList.clear();
         tdList.addAll(DummyDataHelper.getTutorialList());
         setChanged();
         notifyObservers();
