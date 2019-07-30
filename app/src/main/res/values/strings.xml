@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="show">göster</string>
+    <string name="hide">gizle</string>
 </resources>

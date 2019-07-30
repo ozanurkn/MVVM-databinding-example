@@ -36,4 +36,8 @@ public class DataItemViewModel extends BaseObservable {
     public int getNumberOfReading() {
         return tutorialData.getNumberOfReadings();
     }
+
+    public String getJustForExample(){
+        return tutorialData.getJustExample();
+    }
 }

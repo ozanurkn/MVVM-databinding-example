@@ -10,6 +10,7 @@ import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.ozan.myapplication.R;
 import com.ozan.myapplication.adapter.RecyclerAdapter;
@@ -30,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements Observer {
 
     private DataViewModel dataViewModel;
     private ActivityMainBinding binding;
-
+    int counter = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -66,7 +67,10 @@ public class MainActivity extends AppCompatActivity implements Observer {
         if (o instanceof DataViewModel){
             DataViewModel dataViewModel = (DataViewModel) o;
             RecyclerAdapter recyclerAdapter = (RecyclerAdapter) binding.recyclerview.getAdapter();
+            assert recyclerAdapter != null;
             recyclerAdapter.setList(dataViewModel.getAllTdList());
+            counter ++;
+            Toast.makeText(getContext(),counter + " :refreshing",Toast.LENGTH_SHORT).show();
         }
     }
 }

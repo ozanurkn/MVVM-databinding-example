@@ -5,8 +5,17 @@ public class TutorialData {
     private String tutorialDescription;
     private String authorName;
     private int numberOfReadings;
+    private String justExample;
 
-    public TutorialData(String tutorialTitle,String tutorialDescription,String authorName,int numberOfReadings) {
+    public String getJustExample() {
+        return justExample;
+    }
+
+    public void setJustExample(String justExample) {
+        this.justExample = justExample;
+    }
+
+    public TutorialData(String tutorialTitle, String tutorialDescription, String authorName, int numberOfReadings) {
         this.tutorialTitle = tutorialTitle;
         this.tutorialDescription = tutorialDescription;
         this.authorName = authorName;
